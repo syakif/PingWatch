@@ -1,0 +1,5 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/PingWatch.Api/PingWatch.Api.csproj" />
+  </Folder>
+</Solution>

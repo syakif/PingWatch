@@ -1,0 +1,318 @@
+/* ==========================================================================
+   PingWatch Vintage Styling Sheet
+   Aesthetic: 1980s Typewriter / Telegraph Monochromatic & Cardboard Palette
+   ========================================================================== */
+
+:root {
+  --bg-canvas: #f5f0e6;
+  --bg-card: #ece5d8;
+  --bg-input: #ffffff;
+  --text-primary: #1c1a17;
+  --text-muted: #665f55;
+  --border-dark: #1c1a17;
+  --accent-up: #1d5f27;
+  --accent-down: #8b251e;
+  --accent-warn: #8f6208;
+  --shadow-hard: 3px 3px 0px #1c1a17;
+  --shadow-hard-pressed: 1px 1px 0px #1c1a17;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Courier New", Courier, "Lucida Console", Monaco, monospace;
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  line-height: 1.5;
+  padding: 24px 16px;
+  background-image: radial-gradient(#dfd7c5 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.vintage-container {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+/* Header Banner */
+.retro-header {
+  border: 2px solid var(--border-dark);
+  background: var(--bg-card);
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-hard);
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-bottom: 2px dashed var(--border-dark);
+  padding-bottom: 14px;
+}
+
+.logo-title {
+  font-size: 1.8rem;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.logo-subtitle {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.system-ticker {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: var(--text-muted);
+}
+
+/* Action Buttons & Links */
+.btn-retro {
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border: 2px solid var(--border-dark);
+  padding: 7px 14px;
+  cursor: pointer;
+  box-shadow: var(--shadow-hard);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.05s ease;
+}
+
+.btn-retro:hover {
+  background: #fdfaf3;
+}
+
+.btn-retro:active {
+  transform: translate(2px, 2px);
+  box-shadow: var(--shadow-hard-pressed);
+}
+
+.btn-retro-sm {
+  padding: 4px 8px;
+  font-size: 0.75rem;
+}
+
+.btn-danger {
+  color: var(--accent-down);
+}
+
+.btn-primary {
+  background: #1c1a17;
+  color: #f5f0e6;
+}
+
+.btn-primary:hover {
+  background: #332f2b;
+}
+
+/* Form Section */
+.retro-box {
+  border: 2px solid var(--border-dark);
+  background: var(--bg-card);
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-hard);
+}
+
+.box-title {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  border-bottom: 2px solid var(--border-dark);
+  padding-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.monitor-form {
+  display: grid;
+  grid-template-columns: 1fr 2fr auto;
+  gap: 12px;
+  align-items: end;
+}
+
+@media (max-width: 768px) {
+  .monitor-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-label {
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.form-input {
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 8px 10px;
+  border: 2px solid var(--border-dark);
+  background: var(--bg-input);
+  outline: none;
+  border-radius: 0;
+}
+
+.form-input:focus {
+  background: #fffffa;
+  border-color: #000;
+}
+
+/* Badges / Stamp Status */
+.stamp {
+  display: inline-block;
+  padding: 2px 7px;
+  border: 1px solid var(--border-dark);
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stamp-up {
+  color: var(--accent-up);
+  border-color: var(--accent-up);
+  background: #eaf5ea;
+}
+
+.stamp-down {
+  color: var(--accent-down);
+  border-color: var(--accent-down);
+  background: #faeceb;
+}
+
+.stamp-pending {
+  color: var(--accent-warn);
+  border-color: var(--accent-warn);
+  background: #fbf6ea;
+}
+
+/* Data Table */
+.table-responsive {
+  overflow-x: auto;
+}
+
+.retro-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  text-align: left;
+}
+
+.retro-table th,
+.retro-table td {
+  border: 1px solid var(--border-dark);
+  padding: 10px 12px;
+  vertical-align: middle;
+}
+
+.retro-table th {
+  background: #ded7c8;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+}
+
+.retro-table tbody tr:hover {
+  background: #f8f5ee;
+}
+
+.action-group {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 36px 12px;
+  color: var(--text-muted);
+}
+
+.empty-state p {
+  margin-top: 8px;
+  font-size: 0.85rem;
+}
+
+/* Inspection History Modal */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(28, 26, 23, 0.6);
+  z-index: 1000;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.modal-content {
+  max-width: 800px;
+  margin: 40px auto;
+  background: var(--bg-card);
+  border: 2px solid var(--border-dark);
+  box-shadow: 6px 6px 0px #1c1a17;
+  padding: 24px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--border-dark);
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+.modal-body {
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+/* Alerts and Notices */
+.retro-banner {
+  border: 1px dashed var(--border-dark);
+  padding: 8px 12px;
+  font-size: 0.8rem;
+  margin-bottom: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

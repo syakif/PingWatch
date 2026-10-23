@@ -1,0 +1,15 @@
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: pingwatch-sql
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=PingWatch@2026!
+    ports:
+      - "1433:1433"
+    restart: unless-stopped
+    volumes:
+      - pingwatch_data:/var/opt/mssql
+
+volumes:
+  pingwatch_data:
