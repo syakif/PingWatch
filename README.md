@@ -1,4 +1,4 @@
-# ⏱️ PingWatch // Lightweight Website Uptime Monitor
+# PingWatch // Lightweight Website Uptime Monitor
 
 A clean, production-grade **Website Uptime Monitor** engineered with **ASP.NET Core Web API**, **Hangfire**, **Entity Framework Core**, **SQL Server**, and a decoupled **Vintage 1980s Typewriter HTML/CSS/JS** frontend.
 
