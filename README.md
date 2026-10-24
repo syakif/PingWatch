@@ -6,7 +6,7 @@ PingWatch is designed to demonstrate how Hangfire functions naturally in a real-
 
 ---
 
-## 🏛️ Architecture & System Topology
+## Architecture & System Topology
 
 PingWatch enforces a clean separation of concerns:
 - **Backend**: Pure RESTful API service with Hangfire background dispatchers. No Razor views or server-side MVC rendering.
@@ -53,7 +53,7 @@ flowchart TD
 
 ---
 
-## 🎯 Hangfire Learning Pillars Demonstrated
+## Hangfire Learning Pillars Demonstrated
 
 ### 1. Recurring Jobs (`RecurringJob.AddOrUpdate`)
 - Uses a centralized orchestrator model: `pingwatch-check-all-monitors`.
@@ -75,7 +75,7 @@ flowchart TD
 
 ---
 
-## 📦 Tech Stack
+## Tech Stack
 
 | Technology | Purpose |
 | :--- | :--- |
@@ -88,7 +88,7 @@ flowchart TD
 
 ---
 
-## 🗄️ Data Model & Schema
+## Data Model & Schema
 
 The domain uses two core entities:
 
@@ -113,7 +113,7 @@ Represents the historical outcome of a single HTTP probe.
 
 ---
 
-## 🔌 REST API Endpoints
+## REST API Endpoints
 
 | Method | Endpoint | Description | Sample Request / Query |
 | :--- | :--- | :--- | :--- |
@@ -125,7 +125,7 @@ Represents the historical outcome of a single HTTP probe.
 
 ---
 
-## 🖥️ Vintage Frontend Interface
+## Vintage Frontend Interface
 
 The frontend (`/client`) is deliberately crafted with a **1980s retro teletype / typewriter** style:
 - **Color Palette**: Warm cardboard/parchment background (`#F5F0E6`), dark typewriter ink text (`#1C1A17`), and muted stamp indicators.
@@ -139,7 +139,7 @@ The frontend (`/client`) is deliberately crafted with a **1980s retro teletype /
 
 ---
 
-## 🚀 Quickstart & Setup Guide
+## Quickstart & Setup Guide
 
 ### Prerequisites
 - [.NET 10 SDK](https://dotnet.microsoft.com/) (or .NET 8+)
@@ -170,7 +170,7 @@ dotnet run --project src/PingWatch.Api/PingWatch.Api.csproj --urls "http://local
 
 ---
 
-## ⚙️ Configuration Reference (`appsettings.json`)
+## Configuration Reference (`appsettings.json`)
 
 ```json
 {
@@ -189,7 +189,7 @@ dotnet run --project src/PingWatch.Api/PingWatch.Api.csproj --urls "http://local
 
 ---
 
-## 🛡️ Best Practices Implemented
+## Best Practices Implemented
 
 1. **Socket Exhaustion Protection**: Uses `IHttpClientFactory` typed handler with DNS lifetime pooling and pre-configured timeout.
 2. **Cancellation Token Propagation**: Cancels probe requests gracefully if the host initiates shutdown.
